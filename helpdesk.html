@@ -1,0 +1,115 @@
+<!DOCTYPE html> <!-- blue color = tag which needs start and end -->
+<html lang="en"> <!-- start -->
+    <head> <!-- //head and body are in the same line, family. -->
+        <meta charset="utf-8" />
+        <meta name="description" content="form"/>
+        <meta name="keywords" content="helpdesk"/>
+        <meta name="author" content="Yumin Park"/>
+        <title> CWA Help Desk Appointment </title>
+    </head>
+    <body>
+        <a href="https://www.swinburne.edu.au" target="_blank">
+            <img src="images/logo.png" alt="Logo" height="100" width="200" />
+        </a>
+        <h1>CWA Help Desk Appointment</h1>
+        <p>
+            The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday
+            <br />
+            Check Blackboard for when CWA tutors will be there.
+        </p>
+        <form id="details" method="post" action="process.php">
+            <fieldset>
+                <legend>Student details</legend>
+                    <p>
+                        <label for="Sid">Student ID</label>
+                        <input type="text" name="id" id="Sid" required="required" pattern="^(\d{7}|\d{10})$"/>
+                    </p>
+                    <p>
+                        <label for="Gname">Given Name</label> 
+                        <input type="text" name= "givenname" id="Gname" required="required" pattern="^[a-zA-Z ]+$"/>
+
+                        <label for="Fname">Family Name</label> 
+                        <input type="text" name= "familyname" id="Fname" required="required" pattern="^[a-zA-Z ]+$"/>
+                    </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your unit</legend>
+                <p>
+                    <label><input type="radio" name="things[]" 
+                        value="10011" required="required" />
+                        COS10011</label>
+    
+                    <label><input type="radio" name="things[]" 
+                        value="60004" />
+                        COS60004</label>
+    
+                    <label><input type="radio" name="things[]"
+                        value="60007" />
+                        COS60007</label>
+                </p>
+                <p>
+                    <label for="tutor">Your Tutor</label> 
+                    <select name="tutor" id="tutor">
+                        <option value="selcet">Please Select</option>
+                        <option value="Lecturer">Mohammad Ahmadi</option>			
+                        <option value="Lecturer">Sudath Heiyanthuduwage</option>
+                        <option value="Convenor">Atif Ali</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Issue</legend>
+                <p>
+                    <label>
+                        HTML
+                        <input type="checkbox" name="things[]" 
+                        value="html" checked="checked"/></label>
+                    <label>
+                        CSS
+                        <input type="checkbox" name="things[]" 
+                        value="css" /></label>
+                    <label>
+                        JavaScript
+                        <input type="checkbox" name="things[]" 
+                        value="JS" /></label>
+                    <label>
+                        PHP
+                        <input type="checkbox" name="things[]" 
+                        value="php" /></label>
+                    <label>
+                        MySQL
+                        <input type="checkbox" name="things[]" 
+                        value="mysql" /></label>
+                </p>
+                <p>
+                    <label for="comments">Description of Issue</label>
+                    <br />
+                    <textarea id="comments" name="comments" rows="4" cols="40" 
+                    placeholder="Write description of your problem here..."></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Date / Time</legend>
+                <p>
+                    <label>Date
+                        <input type="date" name="day" placeholder="dd-mm-yyyy" pattern="\d{1,2}\/\d{1,2}\/\d{4}"/>
+                    </label>
+                </p>
+                <p>
+                    <label>Time
+                        <input type="time" name="time" placeholder="00:00" pattern="\d{2}\:\d{2}\" />
+                    </label>
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Book"/>
+                <input type="reset" value="Reset form" />
+            </p>
+
+        </form>
+    </body>
+
+</html> <!-- end -->

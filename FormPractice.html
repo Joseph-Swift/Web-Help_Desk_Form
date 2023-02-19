@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- blue color = tag which needs start and end -->
+<html lang="en"> <!-- start -->
+    <head> <!-- //head and body are in the same line, family. -->
+        <meta charset="utf-8" />
+        <meta name="description" content="form"/>
+        <meta name="keywords" content="form, apply, payment"/>
+        <meta name="author" content="C. DeVille"/>
+        <title> My firt page </title>
+    </head>
+    <body>
+        <nav>
+            <a href="week01.html" title="home">
+            Home
+            </a> |
+            <a href="#paragraph2" title="2nd">
+                2nd Paragraph
+            </a> -
+            <a href="Form01.html" title="going to form" target="_blank">
+                Form
+            </a>
+        </nav>
+        <form id="login" method="post" action="process.php">
+            <p>
+                <label for="ages">Age:</label>
+                <input type="text" name="value" id="age"/>
+            </p>
+            <p>Things you like about the seminar
+                <br />
+                Location
+                <label><input type="checkbox" name="things[]" 
+                    value="loc" checked="checked"/></label>
+
+                <label><input type="checkbox" name="things[]" 
+                    value="food" />
+                    Food</label>
+
+                <label><input type="checkbox" name="things[]"
+                    value="spk" />
+                    Speaker</label>
+            </p>
+            <p>
+                <input type="submit" value="Apply"/>
+                <input type="reset" value="Clear" />
+            </p>
+            <fieldset>
+                <legend>Personal Details:</legend>
+                <p>
+                    <label>Date
+                    <input type="date" name="bday" />
+                    </label>
+                </p>
+                <p>
+                    <label>Your Email
+                    <input type="email" name="contactemail"
+                    placeholder="name@domain.com"
+                    required="required" /> <!-- reauired = must be filled, compulsory-->
+                    </label>
+                </p>
+                <p>
+                    <label>Enter your Year from 0 to 10
+                        <input type="number" name="score" min="0"
+                                    max="10" step="1" value="4" />
+                    </label>
+                </p>
+                <p>
+                    <label>Enter your age from 0 to 100
+                    <input type="range" name="rating" min="0"
+                    max="100" value="10" />
+                    </label>
+                </p>
+                <p>
+                    <label>Your Website URL
+                    <input type="url" name="website"
+                        placeholder="http://www.domainname.au" />
+                    </label>
+                </p>
+                <p>
+                    <label>Phone :
+                    <input type="tel" name="phone"
+                            placeholder="(##) ####-####"
+                    pattern="\(\d{2}\) +\d{4}-\d{4}" /> </label>
+                </p>
+                <p>
+                    <label>Favourite Season
+                    <input type="text" name="favseason" list="seasons"> <!--list is connected to id-->
+                        <datalist id="seasons"> <!--ex) House address-->
+                            <option value = "Spring">
+                            <option value = "Summer">
+                            <option value = "Autumn">
+                            <option value = "Winter">
+                        </datalist>
+                        </label>
+                </p>
+            </fieldset>
+
+        </form>
+    </body>
+
+</html> <!-- end -->
